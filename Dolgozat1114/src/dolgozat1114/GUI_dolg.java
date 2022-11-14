@@ -4,16 +4,26 @@
  */
 package dolgozat1114;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import javax.swing.JButton;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 public class GUI_dolg extends javax.swing.JFrame {
 
-    private static void kilepes() {
+    private void kilepes() {
+
+        int result = JOptionPane.showConfirmDialog(kilepesMenuItem,
+                "Biztos kilépsz?",
+                "Confirm Quit", JOptionPane.YES_NO_CANCEL_OPTION);
+        if (result == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
 
 //        JOptionPane.showConfirmDialog(, "kilepes?") :(
     }
@@ -34,17 +44,35 @@ public class GUI_dolg extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jMenu3 = new javax.swing.JMenu();
         buttonGroup1 = new javax.swing.ButtonGroup();
         bejeletkezespane = new javax.swing.JTabbedPane();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        amobapanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         keveres = new javax.swing.JCheckBox();
         kod = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         beallitas = new javax.swing.JLabel();
         gombPanel = new javax.swing.JPanel();
         gomb1 = new javax.swing.JButton();
@@ -58,28 +86,10 @@ public class GUI_dolg extends javax.swing.JFrame {
         gomb9 = new javax.swing.JButton();
         gomb0 = new javax.swing.JButton();
         pink = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         program = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        kilepesMenuItem = new javax.swing.JMenuItem();
         jatekelrendezes = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -89,11 +99,101 @@ public class GUI_dolg extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(410, 350));
 
+        bejeletkezespane.setBackground(new java.awt.Color(0, 204, 255));
         bejeletkezespane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jPanel1.setLayout(new java.awt.GridLayout());
+        amobapanel.setBackground(new java.awt.Color(0, 102, 102));
+        amobapanel.setLayout(new java.awt.GridLayout(3, 3));
+        amobapanel.add(jButton1);
+        amobapanel.add(jButton2);
+        amobapanel.add(jButton3);
+        amobapanel.add(jButton4);
+        amobapanel.add(jButton5);
+        amobapanel.add(jButton6);
+        amobapanel.add(jButton7);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        amobapanel.add(jButton8);
+        amobapanel.add(jButton9);
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("jRadioButton1");
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("jRadioButton2");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton1)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton2)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(amobapanel, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(amobapanel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("tab1", jPanel4);
+
+        bejeletkezespane.addTab("Játék", jTabbedPane2);
+
+        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
+
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(null));
 
         keveres.setText("Kever");
         keveres.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +211,13 @@ public class GUI_dolg extends javax.swing.JFrame {
 
         jLabel1.setText("kód:");
 
+        jCheckBox1.setText("pinkód keverés");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -122,13 +229,15 @@ public class GUI_dolg extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(kod, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jCheckBox1))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(keveres)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
@@ -140,8 +249,8 @@ public class GUI_dolg extends javax.swing.JFrame {
         beallitas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         beallitas.setText("Beállítás");
 
-        gombPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        gombPanel.setLayout(new java.awt.GridBagLayout());
+        gombPanel.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        gombPanel.setLayout(new java.awt.GridLayout(4, 0));
 
         gomb1.setText("1");
         gomb1.addActionListener(new java.awt.event.ActionListener() {
@@ -149,13 +258,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb1ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 10, 0, 0);
-        gombPanel.add(gomb1, gridBagConstraints);
+        gombPanel.add(gomb1);
 
         gomb2.setText("2");
         gomb2.addActionListener(new java.awt.event.ActionListener() {
@@ -163,12 +266,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb2ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 8, 0, 0);
-        gombPanel.add(gomb2, gridBagConstraints);
+        gombPanel.add(gomb2);
 
         gomb3.setText("3");
         gomb3.addActionListener(new java.awt.event.ActionListener() {
@@ -176,13 +274,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb3ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 8, 0, 46);
-        gombPanel.add(gomb3, gridBagConstraints);
+        gombPanel.add(gomb3);
 
         gomb4.setText("4");
         gomb4.addActionListener(new java.awt.event.ActionListener() {
@@ -190,12 +282,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb4ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 8, 0, 0);
-        gombPanel.add(gomb4, gridBagConstraints);
+        gombPanel.add(gomb4);
 
         gomb5.setText("5");
         gomb5.addActionListener(new java.awt.event.ActionListener() {
@@ -203,13 +290,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb5ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(8, 8, 0, 0);
-        gombPanel.add(gomb5, gridBagConstraints);
+        gombPanel.add(gomb5);
 
         gomb6.setText("6");
         gomb6.addActionListener(new java.awt.event.ActionListener() {
@@ -217,14 +298,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb6ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(8, 8, 0, 46);
-        gombPanel.add(gomb6, gridBagConstraints);
+        gombPanel.add(gomb6);
 
         gomb7.setText("7");
         gomb7.addActionListener(new java.awt.event.ActionListener() {
@@ -232,12 +306,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb7ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 8, 0, 0);
-        gombPanel.add(gomb7, gridBagConstraints);
+        gombPanel.add(gomb7);
 
         gomb8.setText("8");
         gomb8.addActionListener(new java.awt.event.ActionListener() {
@@ -245,13 +314,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb8ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(8, 8, 0, 0);
-        gombPanel.add(gomb8, gridBagConstraints);
+        gombPanel.add(gomb8);
 
         gomb9.setText("9");
         gomb9.addActionListener(new java.awt.event.ActionListener() {
@@ -259,13 +322,7 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb9ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 8, 0, 46);
-        gombPanel.add(gomb9, gridBagConstraints);
+        gombPanel.add(gomb9);
 
         gomb0.setText("0");
         gomb0.addActionListener(new java.awt.event.ActionListener() {
@@ -273,16 +330,10 @@ public class GUI_dolg extends javax.swing.JFrame {
                 gomb0ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipadx = 58;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(8, 10, 82, 0);
-        gombPanel.add(gomb0, gridBagConstraints);
+        gombPanel.add(gomb0);
 
-        pink.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        pink.setBackground(new java.awt.Color(102, 255, 204));
+        pink.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         pink.setText("Pin kód");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -296,12 +347,12 @@ public class GUI_dolg extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pink)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(gombPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(gombPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(beallitas))))
-                .addGap(0, 86, Short.MAX_VALUE))
+                .addGap(0, 112, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,8 +365,8 @@ public class GUI_dolg extends javax.swing.JFrame {
                         .addComponent(beallitas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(gombPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                    .addComponent(gombPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(120, 120, 120)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -324,159 +375,39 @@ public class GUI_dolg extends javax.swing.JFrame {
 
         bejeletkezespane.addTab("Bejelentkezés", jPanel2);
 
-        jPanel4.setLayout(new java.awt.GridLayout());
-
-        jButton1.setText("jButton1");
-
-        jButton2.setText("jButton2");
-
-        jButton3.setText("jButton3");
-
-        jButton4.setText("jButton4");
-
-        jButton5.setText("jButton5");
-
-        jButton6.setText("jButton6");
-
-        jButton7.setText("jButton7");
-
-        jButton8.setText("jButton8");
-
-        jButton9.setText("jButton9");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton9))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9))
-                .addContainerGap(91, Short.MAX_VALUE))
-        );
-
-        jPanel4.add(jPanel5);
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
-
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("jRadioButton1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("jRadioButton2");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 13, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.TRAILING)))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
-        jPanel4.add(jPanel6);
-
-        jTabbedPane1.addTab("tab1", jPanel4);
-
-        bejeletkezespane.addTab("tab2", jTabbedPane1);
-
         program.setText("Program");
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, 0));
+        jMenuItem1.setText("Újra");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         program.add(jMenuItem1);
 
-        jMenuItem2.setText("jMenuItem2");
-        program.add(jMenuItem2);
+        kilepesMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        kilepesMenuItem.setText("Kilépés");
+        kilepesMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kilepesMenuItemActionPerformed(evt);
+            }
+        });
+        program.add(kilepesMenuItem);
 
         jMenuBar1.add(program);
 
         jatekelrendezes.setText("Játék elrendezése");
 
-        jMenuItem3.setText("jMenuItem3");
+        jMenuItem3.setText("vízszintes");
         jatekelrendezes.add(jMenuItem3);
 
-        jMenuItem4.setText("jMenuItem4");
+        jMenuItem4.setText("függőleges");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jatekelrendezes.add(jMenuItem4);
 
         jMenuBar1.add(jatekelrendezes);
@@ -499,9 +430,17 @@ public class GUI_dolg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void gomb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb0ActionPerformed
+        gomb0.setBackground(Color.blue);
+        kod.setText(kod.getText() + "0");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gomb0ActionPerformed
+
     private void gomb9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb9ActionPerformed
         kod.setText(kod.getText() + "9");
         tomb.add("9");
+        gomb9.setBackground(Color.blue);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb9ActionPerformed
@@ -509,12 +448,14 @@ public class GUI_dolg extends javax.swing.JFrame {
     private void gomb8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb8ActionPerformed
         kod.setText(kod.getText() + "8");
         tomb.add("8");
+        gomb8.setBackground(Color.blue);
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb8ActionPerformed
 
     private void gomb7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb7ActionPerformed
         kod.setText(kod.getText() + "7");
         tomb.add("7");
+        gomb7.setBackground(Color.blue);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb7ActionPerformed
@@ -522,6 +463,7 @@ public class GUI_dolg extends javax.swing.JFrame {
     private void gomb6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb6ActionPerformed
         kod.setText(kod.getText() + "6");
         tomb.add("6");
+        gomb6.setBackground(Color.blue);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb6ActionPerformed
@@ -529,6 +471,7 @@ public class GUI_dolg extends javax.swing.JFrame {
     private void gomb5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb5ActionPerformed
         kod.setText(kod.getText() + "5");
         tomb.add("5");
+        gomb5.setBackground(Color.blue);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb5ActionPerformed
@@ -536,35 +479,109 @@ public class GUI_dolg extends javax.swing.JFrame {
     private void gomb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb4ActionPerformed
         kod.setText(kod.getText() + "4");
         tomb.add("4");
-
+        gomb4.setBackground(Color.blue);
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb4ActionPerformed
 
     private void gomb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb3ActionPerformed
         kod.setText(kod.getText() + "3");
         tomb.add("3");// TODO add your handling code here:
+        gomb3.setBackground(Color.blue);
     }//GEN-LAST:event_gomb3ActionPerformed
 
     private void gomb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb2ActionPerformed
 
         kod.setText(kod.getText() + "2");
         tomb.add("2");
-
+        gomb2.setBackground(Color.blue);
         // TODO add your handling code here:
     }//GEN-LAST:event_gomb2ActionPerformed
 
     private void gomb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb1ActionPerformed
         tomb.add("1");
         kod.setText(kod.getText() + "1");
-
+        gomb1.setBackground(Color.blue);
     }//GEN-LAST:event_gomb1ActionPerformed
 
     private void kodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodActionPerformed
 
-
     }//GEN-LAST:event_kodActionPerformed
 
     private void keveresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keveresActionPerformed
+        ArrayList<String> gombokNevei = new ArrayList<String>();
+        gombokNevei.add(gomb1.getText());
+        gombokNevei.add(gomb2.getText());
+        gombokNevei.add(gomb3.getText());
+        gombokNevei.add(gomb4.getText());
+        gombokNevei.add(gomb5.getText());
+        gombokNevei.add(gomb6.getText());
+        gombokNevei.add(gomb7.getText());
+        gombokNevei.add(gomb8.getText());
+        gombokNevei.add(gomb9.getText());
+        gombokNevei.add(gomb0.getText());
+
+        Collections.shuffle(gombokNevei);
+//        for (int i = 0; i < gombokNevei.size(); i++) {
+//            
+//            
+//        }
+
+        gomb1.setText(gombokNevei.get(0));
+        gomb2.setText(gombokNevei.get(1));
+        gomb3.setText(gombokNevei.get(2));
+        gomb4.setText(gombokNevei.get(3));
+        gomb5.setText(gombokNevei.get(4));
+        gomb6.setText(gombokNevei.get(5));
+        gomb7.setText(gombokNevei.get(6));
+        gomb8.setText(gombokNevei.get(7));
+        gomb9.setText(gombokNevei.get(8));
+        gomb0.setText(gombokNevei.get(9));
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_keveresActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+
+        ArrayList<JButton> gombjaim = new ArrayList<JButton>();
+
+        gombjaim.add(gomb0);
+        gombjaim.add(gomb1);
+        gombjaim.add(gomb2);
+        gombjaim.add(gomb3);
+        gombjaim.add(gomb4);
+        gombjaim.add(gomb5);
+        gombjaim.add(gomb6);
+        gombjaim.add(gomb7);
+        gombjaim.add(gomb8);
+        gombjaim.add(gomb9);
+
+        for (JButton button : gombjaim) {
+            button.setBackground(Color.white);
+        }
+
+        for (int i = 0; i < gombjaim.size(); i++) {
+
+        }
+
+        gomb1.setText("1");
+        gomb2.setText("2");
+        gomb3.setText("3");
+        gomb4.setText("4");
+        gomb5.setText("5");
+        gomb6.setText("6");
+        gomb6.setText("7");
+        gomb8.setText("8");
+        gomb9.setText("9");
+        gomb0.setText("0");
+
+
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         String kevertes = "";
         int max = kodSzovege.length();
         int min = 0;
@@ -579,21 +596,22 @@ public class GUI_dolg extends javax.swing.JFrame {
             }
             kevertes += tomb;
             kod.setText(kevertes);
+
         }
 
-        // TODO add your handling code here:
-    }//GEN-LAST:event_keveresActionPerformed
 
-    private void gomb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb0ActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-        kod.setText(kod.getText() + "0");
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-        // TODO add your handling code here:
-    }//GEN-LAST:event_gomb0ActionPerformed
+    private void kilepesMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kilepesMenuItemActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+        kilepes();
+        
+
+
+    }//GEN-LAST:event_kilepesMenuItemActionPerformed
 
     class KilepesFigyelo implements ActionListener {
 
@@ -605,8 +623,6 @@ public class GUI_dolg extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-
-        kilepes();
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -635,6 +651,7 @@ public class GUI_dolg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel amobapanel;
     private javax.swing.JLabel beallitas;
     private javax.swing.JTabbedPane bejeletkezespane;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -658,27 +675,27 @@ public class GUI_dolg extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JMenu jatekelrendezes;
     private javax.swing.JCheckBox keveres;
+    private javax.swing.JMenuItem kilepesMenuItem;
     private javax.swing.JTextField kod;
     private javax.swing.JLabel pink;
     private javax.swing.JMenu program;
